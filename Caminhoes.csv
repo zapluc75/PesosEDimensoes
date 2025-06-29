@@ -1,0 +1,116 @@
+Codigo,Pbt1,Qtara,Tam,Pbt2,Tamax,AET,OBS
+C1,12000,1,14,12000,14,Nao,Veiculo Comum
+C2,16000,1,14,16000,14,Nao,Veiculo Comum
+C3,23000,1,14,23000,14,Nao,Veiculo Comum
+C4,19500,1,14,19500,14,Nao,Veiculo Comum
+C5,19500,1,14,19500,14,Nao,Veiculo Comum
+C6,22000,1,14,22000,14,Nao,Veiculo Comum
+C7,29000,1,14,29000,14,Nao,Veiculo Comum
+C8,25500,1,14,25500,14,Nao,Veiculo Comum
+C9,25500,1,14,25500,14,Nao,Veiculo Comum
+CTS1,26000,2,16,26000,18.60,Nao,Veiculo Comum
+CTS2,33000,2,16,33000,18.60,Nao,Veiculo Comum
+CTS3,36000,2,16,36000,18.60,Nao,Veiculo Comum
+CTS4,41500,2,16,41500,18.60,Nao,Veiculo Comum
+CTS5,43000,2,16,43000,18.60,Nao,Veiculo Comum
+CTS6,45000,2,16,45000,18.60,Nao,Veiculo Comum
+CTS7,33000,2,16,33000,18.60,Nao,Veiculo Comum
+CTS8,43000,2,16,43000,18.60,Nao,Veiculo Comum
+CTS9,39500,2,16,39500,18.60,Nao,Veiculo Comum
+CTS10,45000,2,16,48500,18.60,Nao,Veiculo Comum
+CTS11,48500,2,17.5,58500,18.60,Nao,Veiculo Comum
+CTS12,45000,2,16,45000,18.60,Nao,Veiculo Comum
+CTS13,45000,2,16,50000,18.60,Nao,Veiculo Comum
+CTS14,45000,2,16,46500,18.60,Nao,Veiculo Comum
+CTS15,45000,2,16,53000,18.60,Nao,Veiculo Comum
+CTS16,45000,2,16,49500,18.60,Nao,Veiculo Comum
+CTS17,29500,2,16,29500,18.60,Nao,Veiculo Comum
+CTS18,36500,2,16,36500,18.60,Nao,Veiculo Comum
+CTS19,40000,2,16,40000,18.60,Nao,Veiculo Comum
+CTS20,45000,2,16,52500,18.60,Nao,Veiculo Comum
+CTS21,45000,2,16,47500,18.60,Nao,Veiculo Comum
+CTS22,45000,2,16,54500,18.60,Nao,Veiculo Comum
+CTS23,45000,2,16,51000,18.60,Nao,Veiculo Comum
+CTS24,39000,2,16,39000,18.60,Nao,Veiculo Comum
+CTS25,35500,2,16,35500,18.60,Nao,Veiculo Comum
+CTS26,45000,2,16,46000,18.60,Nao,Veiculo Comum
+CTS27,42500,2,16,42500,18.60,Nao,Veiculo Comum
+CTS28,45000,2,16,49000,18.60,Nao,Veiculo Comum
+CTS29,45000,2,16,45500,18.60,Nao,Veiculo Comum
+CR1,36000,2,17.5,36000,19.80,Nao,Veiculo Comum
+CR2,43000,2,17.5,43000,19.80,Nao,Veiculo Comum
+CR3,45000,2,17.5,50000,19.80,Nao,Veiculo Comum
+CR4,43000,2,17.5,43000,19.80,Nao,Veiculo Comum
+CR5,45000,2,17.5,50000,19.80,Nao,Veiculo Comum
+CR6,45000,2,17.5,57000,19.80,Nao,Veiculo Comum
+CR7,39500,2,17.5,39500,19.80,Nao,Veiculo Comum
+CR8,45000,2,17.5,46500,19.80,Nao,Veiculo Comum
+CR9,45000,2,17.5,53500,19.80,Nao,Veiculo Comum
+CR10,45000,2,17.5,49000,19.80,Nao,Veiculo Comum
+CR11,45000,2,17.5,56000,19.80,Nao,Veiculo Comum
+CR12,45000,2,17.5,45500,19.80,Nao,Veiculo Comum
+CR13,45000,2,17.5,52500,19.80,Nao,Veiculo Comum
+CTSR1,45000,3,17.5,46000,19.80,Nao,Veiculo Comum
+CTSR2,45000,3,17.5,53000,19.80,Nao,Veiculo Comum
+CTSR3,45000,3,17.5,53000,19.80,Nao,Veiculo Comum
+CTSR4,45000,3,17.5,53000,19.80,Nao,Veiculo Comum
+ CTSR5,45000,3,17.5,49500,19.80,Nao,Veiculo Comum 
+CTSR6,45000,3,17.5,56500,19.80,Nao,Veiculo Comum
+CTSR7,45000,3,17.5,56500,19.80,Nao,Veiculo Comum
+CTSS1,36000,3,17.5,36000,19.80,Nao,Veiculo Comum
+CTSS2,43000,3,17.5,43000,19.80,Nao,Veiculo Comum
+CTSS3,39500,3,17.5,39500,19.80,Nao,Veiculo Comum
+CTSS4,43000,3,17.5,43000,19.80,Nao,Veiculo Comum
+CTSS5,45000,3,17.5,50000,19.80,Nao,Veiculo Comum
+CTSS6,45000,3,17.5,46500,19.80,Nao,Veiculo Comum
+CTSS7,45000,3,17.5,50000,19.80,Nao,Veiculo Comum
+CTSS8,45000,3,17.5,57000,19.80,Nao,Veiculo Comum
+CTSS9,45000,3,17.5,53500,19.80,Nao,Veiculo Comum
+CTSR1+,46000,3,19.8,46000,30,Sim,Veiculo Longo
+CTSR2+,53000,3,19.8,53000,30,Sim,Veiculo Longo
+CTSR3+,53000,3,19.8,53000,30,Sim,Veiculo Longo
+CTSR4+,60000,3,25,60000,30,Sim,Veiculo Longo
+CTSR5+,67000,3,25,67000,30,Sim,Veiculo Longo
+CTSR6+,74000,3,25,74000,30,Sim,Veiculo Longo
+CTSR7+,66000,3,25,66000,30,Sim,Veiculo Longo
+CTSR8+,73000,3,25,73000,30,Sim,Veiculo Longo
+CTSS1+,36000,3,19.8,36000,30,Sim,Veiculo Longo
+CTSS2+,43000,3,19.8,43000,30,Sim,Veiculo Longo
+CTSS3+,39500,3,19.8,39500,30,Sim,Veiculo Longo
+CTSS4+,43000,3,19.8,43000,30,Sim,Veiculo Longo
+CTSS5+,50000,3,19.8,50000,30,Sim,Veiculo Longo
+CTSS6+,46500,3,19.8,46500,30,Sim,Veiculo Longo
+CTSS7+,50000,3,19.8,50000,30,Sim,Veiculo Longo
+CTSS8+,57000,3,19.8,57000,30,Sim,Veiculo Longo
+CTSS9+,53500,3,19.8,53500,30,Sim,Veiculo Longo
+CTSS10+,65500,3,25,65500,30,Sim,Veiculo Longo
+CTSS11+,65500,3,25,65500,30,Sim,Veiculo Longo
+CTSS12+,74000,3,25,74000,30,Sim,Veiculo Longo
+CTSS13+,63000,3,25,63000,30,Sim,Veiculo Longo
+CRR1+,63000,3,25,63000,30,Sim,Veiculo Longo
+CRR2+,70000,3,25,70000,30,Sim,Veiculo Longo
+CRR3+,69000,3,25,69000,30,Sim,Veiculo Longo
+CTSSS1+,60000,4,25,60000,30,Sim,Veiculo Longo
+CTSSS2+,60000,4,25,60000,30,Sim,Veiculo Longo
+CTSSS3+,60000,4,25,60000,30,Sim,Veiculo Longo
+CTSSS4+,67000,4,25,67000,30,Sim,Veiculo Longo
+CTSSS5+,67000,4,25,67000,30,Sim,Veiculo Longo
+CTSSS6+,67000,4,25,67000,30,Sim,Veiculo Longo
+CTSSS7+,74000,4,25,74000,30,Sim,Veiculo Longo
+CTSSS8+,56500,4,19.8,56500,30,Sim,Veiculo Longo
+CR1+,36000,2,19.8,36000,25,S,Somente reboque ate 30 abril 2009
+CR2+,43000,2,19.8,43000,25,S,Somente reboque ate 30 abril 2009
+CR3+,50000,2,19.8,50000,25,S,Somente reboque ate 30 abril 2009
+CR4+,43000,2,19.8,43000,25,S,Somente reboque ate 30 abril 2009
+CR5+,50000,2,19.8,50000,25,S,Somente reboque ate 30 abril 2009
+CR6+,57000,2,19.8,57000,25,S,Somente reboque ate 30 abril 2009
+CR7+,39500,2,19.8,39500,25,S,Somente reboque ate 30 abril 2009
+CR8+,46500,2,19.8,46500,25,S,Somente reboque ate 30 abril 2009
+CR9+,53500,2,19.8,53500,25,S,Somente reboque ate 30 abril 2009
+CR10+,49000,2,19.8,49000,25,S,Somente reboque ate 30 abril 2009
+CR11+,56000,2,19.8,56000,25,S,Somente reboque ate 30 abril 2009
+CR12+,45500,2,19.8,45500,25,S,Somente reboque ate 30 abril 2009
+CR13+,52500,2,19.8,52500,25,S,Somente reboque ate 30 abril 2009
+CTSRR1+,91000,3,28,91000,30,S,Reboque com rala
+CTSRR2+,82500,3,28,82500,30,S,Reboque com rala
+CTSRR3+,82500,3,28,82500,30,S,Reboque com rala
