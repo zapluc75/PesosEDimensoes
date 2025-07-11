@@ -3,6 +3,7 @@ import streamlit as st
 from datetime import datetime
 import os
 import re   #leitura placa veicular
+tab1, tab2 = st.tabs(["Cálculo", "Anexo da Resolução"])
 
 # Função para carregar a tabela com cache
 @st.cache_data
@@ -45,125 +46,157 @@ st.sidebar.header("VEÍCULO")
 
 # App Principal Streamlit
 def main():
-    if st.session_state.get("encerrar", False):
-        st.title("🚧 Aplicação finalizada.")
-        st.info("Obrigado por utilizar o sistema.")
-        st.stop()   #estrutura para finalizar tela
-    st.title("📦 APURAÇÃO DE PESOS E DIMENSÕES - DER DF")
-    
-    tabela = carregar_tabela("Caminhoes.csv")
-
-    tipo = st.sidebar.selectbox("Selecione o Tipo de Caminhão", tabela["Codigo"].unique(), key="tipo")
-
-    linha = tabela[tabela["Codigo"] == tipo].iloc[0]
-    # Define a quantidade de placas a serem digitadas
-    qt_tara = st.sidebar.number_input("Quantidade de Taras (número de unidades tracionadas)", min_value=1, max_value=10, step=1, key="qt_tara")
-
-    placas = []
-    taras = []
-
-    st.subheader("🚛 Informações de cada unidade (Placa + Tara)")
-    for i in range(qt_tara): # Coleta os dados primeiro
-        col1, col2 = st.columns(2)
-        with col1:
-            placa = st.text_input(f"Placa {i + 1} (Ex: ABC1234 ou ABC1D23)", key=f"placa_{i}").strip().upper()                       
-        with col2:
-            tara = st.number_input(f"Tara {i + 1} (Kg)", min_value=0.0, key=f"tara_{i}")
-        placas.append(placa)
-        taras.append(tara)
-
-    if st.button("✅ Validar Placa(s)"): # Validação em lote
-        for i in range(qt_tara):
-            placa = placas[i]
-
-            if len(placa) != 7:
-                st.error(f"❌ Placa {i + 1} inválida: Deve conter exatamente 7 caracteres.")
-            elif not validar_placa(placa):
-                st.error(f"❌ Placa {i + 1} inválida: Use um dos formatos: ABC1234 ou ABC1D23.")
-            else:
-                st.success(f"✅ Placa {i + 1} válida: {placa} | Tara: {taras[i]} Kg")
-       
-    nota_fiscal = st.sidebar.number_input("Peso Líquido da Nota Fiscal (Kg)", min_value=0, key="nota_fiscal")
-    comprimento = st.sidebar.number_input("Comprimento do Caminhão (em metros)", min_value=0, key="comprimento")
-    pdf_path = "Pes_e_Dim.pdf"
-    st.markdown(f'<a href="{pdf_path}" target="_blank">📂 Clique aqui para abrir o Anexo da Resolução</a>', unsafe_allow_html=True)
-    
-    if "calculado" not in st.session_state:
-        st.session_state.calculado = False
-
-    if st.button("Calcular"):
-        if not all(placas) or any(t == 0 for t in taras):
-            st.error("⚠️ Preencha todas as placas e taras corretamente.")
-        else:
-            pbt, limite, excesso = calcular_excesso(linha, taras, nota_fiscal, comprimento)
-
-           #data e hora atual
-        agora = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
-
-        #preparar dados para exportação
-        dados_exportar = {
-            "DataHora": agora,
-            "TipoCaminhao": tipo,
-            "Placas": ";".join(placas),
-            "TaraTotal": sum(taras),
-            "NotaFiscal": nota_fiscal,
-            "Comprimento": comprimento,
-            "PBT": pbt,
-            "LimiteLegal": limite,
-            "Excesso": excesso
-        }
-
-        salvar_csv(dados_exportar)
-
-        st.session_state.calculado = True
-        st.session_state.resultado = {
-            "tipo": tipo, "limite": limite, "taras": taras, "placas": placas,
-            "nota_fiscal": nota_fiscal, "comprimento": comprimento,
-            "pbt": pbt, "excesso": excesso, "linha": linha
-        }
-
-        st.rerun()
-
-# Exibir resultados, se já calculado
-    if st.session_state.calculado:
-        r = st.session_state.resultado
-        st.markdown("---")
-        st.subheader("📊 INFORMAÇÕES ")
-
-        st.markdown(f"""
-        - ***Classe do Caminhão:*** `{r["tipo"]}`  
-        - **Comprimento Máx.:**. `{r["linha"]["Tamax"]:.0f}` m  
-        - **Autorização AET:**.. `{r["linha"]["AET"]}`  
-        - **Observação:**....... `{r["linha"]["OBS"]}`  
-        - **PBT Máx. Permitido:**`{r["limite"]:.2f}` Kg 
-        """)
-
-        st.markdown("### ✅ Resultado da Apuração")
-        for p, t in zip(r["placas"], r["taras"]):
-            st.write(f" - Placa: `{p}` | Tara: `{t:.2f}` Kg")
-
-        st.markdown(f"""
-        - **Somatório de Tara(s):**`{sum(r["taras"]):.2f}` Kg  
-        - **Peso Liquido da NF:**... `{r["nota_fiscal"]:.2f}` Kg  
-        - *Peso Bruto Total (PBT):* `{r["pbt"]:.2f}` Kg  
-        """)
-
-        if r["excesso"] > 0:
-            st.error(f"🚨 Excesso de Peso: **{r['excesso']:.2f} Kg.** 📁 Dados salvos com sucesso !")
-        else:
-            st.success("✅ Peso dentro do limite. 📁 Dados salvos com sucesso !")
-
+    with tab1:
+        if st.session_state.get("encerrar", False):
+            st.title("🚧 Aplicação finalizada.")
+            st.info("Obrigado por utilizar o sistema.")
+            st.stop()   #estrutura para finalizar tela
+        st.title("📦 APURAÇÃO DE PESOS E DIMENSÕES - DER DF")
         
-        st.markdown("---")
-        col1, col2 = st.columns(2)
-        if col1.button("🔁 Nova Apuração"):
-            limpar_estado()
-            st.rerun()      
-
-        if col2.button("❌ Encerrar"):
-            st.session_state.encerrar = True
+        tabela = carregar_tabela("Caminhoes.csv")
+    
+        tipo = st.sidebar.selectbox("Selecione o Tipo de Caminhão", tabela["Codigo"].unique(), key="tipo")
+    
+        linha = tabela[tabela["Codigo"] == tipo].iloc[0]
+        # Define a quantidade de placas a serem digitadas
+        qt_tara = st.sidebar.number_input("Quantidade de Taras (número de unidades tracionadas)", min_value=1, max_value=10, step=1, key="qt_tara")
+    
+        placas = []
+        taras = []
+    
+        st.subheader("🚛 Informações de cada unidade (Placa + Tara)")
+        for i in range(qt_tara): # Coleta os dados primeiro
+            col1, col2 = st.columns(2)
+            with col1:
+                placa = st.text_input(f"Placa {i + 1} (Ex: ABC1234 ou ABC1D23)", key=f"placa_{i}").strip().upper()                       
+            with col2:
+                tara = st.number_input(f"Tara {i + 1} (Kg)", min_value=0.0, key=f"tara_{i}")
+            placas.append(placa)
+            taras.append(tara)
+    
+        if st.button("✅ Validar Placa(s)"): # Validação em lote
+            for i in range(qt_tara):
+                placa = placas[i]
+    
+                if len(placa) != 7:
+                    st.error(f"❌ Placa {i + 1} inválida: Deve conter exatamente 7 caracteres.")
+                elif not validar_placa(placa):
+                    st.error(f"❌ Placa {i + 1} inválida: Use um dos formatos: ABC1234 ou ABC1D23.")
+                else:
+                    st.success(f"✅ Placa {i + 1} válida: {placa} | Tara: {taras[i]} Kg")
+           
+        nota_fiscal = st.sidebar.number_input("Peso Líquido da Nota Fiscal (Kg)", min_value=0, key="nota_fiscal")
+        comprimento = st.sidebar.number_input("Comprimento do Caminhão (em metros)", min_value=0, key="comprimento")
+        pdf_path = "Pes_e_Dim.pdf"
+        st.markdown(f'<a href="{pdf_path}" target="_blank">📂 Clique aqui para abrir o Anexo da Resolução</a>', unsafe_allow_html=True)
+        
+        if "calculado" not in st.session_state:
+            st.session_state.calculado = False
+    
+        if st.button("Calcular"):
+            if not all(placas) or any(t == 0 for t in taras):
+                st.error("⚠️ Preencha todas as placas e taras corretamente.")
+            else:
+                pbt, limite, excesso = calcular_excesso(linha, taras, nota_fiscal, comprimento)
+    
+               #data e hora atual
+            agora = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+    
+            #preparar dados para exportação
+            dados_exportar = {
+                "DataHora": agora,
+                "TipoCaminhao": tipo,
+                "Placas": ";".join(placas),
+                "TaraTotal": sum(taras),
+                "NotaFiscal": nota_fiscal,
+                "Comprimento": comprimento,
+                "PBT": pbt,
+                "LimiteLegal": limite,
+                "Excesso": excesso
+            }
+    
+            salvar_csv(dados_exportar)
+    
+            st.session_state.calculado = True
+            st.session_state.resultado = {
+                "tipo": tipo, "limite": limite, "taras": taras, "placas": placas,
+                "nota_fiscal": nota_fiscal, "comprimento": comprimento,
+                "pbt": pbt, "excesso": excesso, "linha": linha
+            }
+    
             st.rerun()
+    
+    # Exibir resultados, se já calculado
+        if st.session_state.calculado:
+            r = st.session_state.resultado
+            st.markdown("---")
+            st.subheader("📊 INFORMAÇÕES ")
+    
+            st.markdown(f"""
+            - ***Classe do Caminhão:*** `{r["tipo"]}`  
+            - **Comprimento Máx.:**. `{r["linha"]["Tamax"]:.0f}` m  
+            - **Autorização AET:**.. `{r["linha"]["AET"]}`  
+            - **Observação:**....... `{r["linha"]["OBS"]}`  
+            - **PBT Máx. Permitido:**`{r["limite"]:.2f}` Kg 
+            """)
+    
+            st.markdown("### ✅ Resultado da Apuração")
+            for p, t in zip(r["placas"], r["taras"]):
+                st.write(f" - Placa: `{p}` | Tara: `{t:.2f}` Kg")
+    
+            st.markdown(f"""
+            - **Somatório de Tara(s):**`{sum(r["taras"]):.2f}` Kg  
+            - **Peso Liquido da NF:**... `{r["nota_fiscal"]:.2f}` Kg  
+            - *Peso Bruto Total (PBT):* `{r["pbt"]:.2f}` Kg  
+            """)
+    
+            if r["excesso"] > 0:
+                st.error(f"🚨 Excesso de Peso: **{r['excesso']:.2f} Kg.** 📁 Dados salvos com sucesso !")
+            else:
+                st.success("✅ Peso dentro do limite. 📁 Dados salvos com sucesso !")
+    
+            
+            st.markdown("---")
+            col1, col2 = st.columns(2)
+            if col1.button("🔁 Nova Apuração"):
+                limpar_estado()
+                st.rerun()      
+    
+            if col2.button("❌ Encerrar"):
+                st.session_state.encerrar = True
+                st.rerun()
+with tab2:
+    from PIL import Image, ImageSequence
+    import streamlit as st
+    import os
 
+    st.set_page_config(page_title="Visualizador de Documento TIFF", layout="centered")
+    st.title("📑 Visualizador de Documento TIFF com Tabelas")
+    
+    # Caminho fixo para o arquivo TIFF
+    CAMINHO_TIFF = os.path.join("imagens", "Pes_e_Dim.tiff")
+    
+    # Verifica se o arquivo existe
+    if os.path.exists(CAMINHO_TIFF):
+        try:
+            # Abrir o arquivo TIFF multipágina
+            tiff = Image.open(CAMINHO_TIFF)
+            pages = [page.copy() for page in ImageSequence.Iterator(tiff)]
+            total_paginas = len(pages)
+    
+            st.success(f"{total_paginas} página(s) detectada(s) em `{CAMINHO_TIFF}`.")
+    
+            # Slider para escolher qual página exibir
+            pagina_escolhida = st.slider("Escolha a página", 1, total_paginas, 1)
+    
+            # Exibição da página
+            st.image(pages[pagina_escolhida - 1], caption=f"Página {pagina_escolhida}", use_container_width=True)
+    
+        except Exception as e:
+            st.error(f"Erro ao abrir o arquivo TIFF: {e}")
+    else:
+        st.warning(f"O arquivo `{CAMINHO_TIFF}` não foi encontrado.")
+        st.info("💡 Certifique-se de que o arquivo `Pes_e_Dim.tiff` está na pasta `./imagens`.")
 
 if __name__ == "__main__":
     main()
