@@ -171,7 +171,7 @@ with tab2:
     import os
 
     st.set_page_config(page_title="Visualizador de Documento TIFF", layout="centered")
-    st.title("📑 Visualizador de Documento TIFF com Tabelas")
+    st.title("📑 Portaria 268 / 2022 Anexo Caminhão")
     
     # Caminho fixo para o arquivo TIFF
     CAMINHO_TIFF = os.path.join("imagens", "Pes_e_Dim.tiff")
