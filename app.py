@@ -167,7 +167,7 @@ def main():
                 st.session_state.encerrar = True
                 st.rerun()
 with tab2:
-    st.title("📄 Selecione o tipo de Caminhão")
+    st.write("📄 Selecione o tipo de Caminhão")
 
     # lista de todos os arquivos png da pasta imagens
     lista_pngs = sorted(glob.glob(os.path.join("imagens", "*.png")))
@@ -175,17 +175,17 @@ with tab2:
 
     #Variável para armazenar seleção
     selecionado = None
+    num_colunas = 6
 
     #Cria pares de elementos (2 por linha)
-    for i in range(0, len(nomes_arquivos), 2):
-        col1, col2 = st.columns(2)
-        with col1:
-            if st.button(nomes_arquivos[i]):
-                selecionado = nomes_arquivos[i]
-        if i + 1 < len(nomes_arquivos):
-            with col2:
-                if st.button(nomes_arquivos[i+1]):
-                    selecionado = nomes_arquivos[i + 1]
+    for i in range(0, len(nomes_arquivos), num_colunas):
+        cols = st.columns(num_colunas)
+
+        for j in range (num_colunas):
+            if i + j < len(nomes_arquivos):
+                with cols[j]:
+                    if st.button(nomes_arquivos[i + j]):
+                        selecionado = nomes_arquivos[i + j]
     if selecionado:
         caminho_img = os.path.join("imagens", selecionado)
         st.image(caminho_img, caption=selecionado, use_container_width=True)
