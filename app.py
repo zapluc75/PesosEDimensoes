@@ -3,6 +3,7 @@ import streamlit as st
 from datetime import datetime
 import os
 import re   #leitura placa veicular
+import glob
 tab1, tab2 = st.tabs(["Cálculo", "Anexo da Resolução"])
 
 # Função para carregar a tabela com cache
@@ -166,37 +167,28 @@ def main():
                 st.session_state.encerrar = True
                 st.rerun()
 with tab2:
-    from PIL import Image, ImageSequence
-    import streamlit as st
-    import os
+    st.title("📄 Selecione o tipo de Caminhão")
 
-    st.set_page_config(page_title="Visualizador de Documento TIFF", layout="centered")
-    st.title("📑 Portaria 268 / 2022 - Anexo Caminhão")
-    
-    # Caminho fixo para o arquivo TIFF
-    CAMINHO_TIFF = os.path.join("imagens", "Pes_e_Dim.tiff")
-    
-    # Verifica se o arquivo existe
-    if os.path.exists(CAMINHO_TIFF):
-        try:
-            # Abrir o arquivo TIFF multipágina
-            tiff = Image.open(CAMINHO_TIFF)
-            pages = [page.copy() for page in ImageSequence.Iterator(tiff)]
-            total_paginas = len(pages)
-    
-            st.success(f"{total_paginas} página(s) detectada(s) em `{CAMINHO_TIFF}`.")
-    
-            # Slider para escolher qual página exibir
-            pagina_escolhida = st.slider("Escolha a página", 1, total_paginas, 1)
-    
-            # Exibição da página
-            st.image(pages[pagina_escolhida - 1], caption=f"Página {pagina_escolhida}", use_container_width=True)
-    
-        except Exception as e:
-            st.error(f"Erro ao abrir o arquivo TIFF: {e}")
-    else:
-        st.warning(f"O arquivo `{CAMINHO_TIFF}` não foi encontrado.")
-        st.info("💡 Certifique-se de que o arquivo `Pes_e_Dim.tiff` está na pasta `./imagens`.")
+    # lista de todos os arquivos png da pasta imagens
+    lista_pngs = sorted(glob.glob(os.path.join("imagens", "*.png")))
+    nomes_arquivos = [os.path.basename(f) for f in lista_pngs]
+
+    #Variável para armazenar seleção
+    selecionado = None
+
+    #Cria pares de elementos (2 por linha)
+    for i in range(0, len(nomes_arquivos), 2):
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button(nomes_arquivos[i]):
+                selecionado = nomes_arquivos[i]
+        if i + 1 < len(nomes_arquivos):
+            with col2:
+                if st.button(nomes_arquivos[i+1]):
+                    selecionado = nomes_arquivos[i + 1]
+    if selecionado:
+        caminho_img = os.path.join("imagens", selecionado)
+        st.image(caminho_img, caption=selecionado, use_container_width=True)
 
 if __name__ == "__main__":
     main()
