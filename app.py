@@ -88,9 +88,7 @@ def main():
            
         nota_fiscal = st.sidebar.number_input("Peso Líquido da Nota Fiscal (Kg)", min_value=0, key="nota_fiscal")
         comprimento = st.sidebar.number_input("Comprimento do Caminhão (em metros)", min_value=0, key="comprimento")
-        pdf_path = "Pes_e_Dim.pdf"
-        st.markdown(f'<a href="{pdf_path}" target="_blank">📂 Clique aqui para abrir o Anexo da Resolução</a>', unsafe_allow_html=True)
-        
+
         if "calculado" not in st.session_state:
             st.session_state.calculado = False
     
@@ -135,11 +133,14 @@ def main():
     
             st.markdown(f"""
             - ***Classe do Caminhão:*** `{r["tipo"]}`  
-            - **Comprimento Máx.:**. `{r["linha"]["Tamax"]:.0f}` m  
+            - **Comprimento Máx. Permitido:**. `{r["linha"]["Tamax"]:.0f}` m  
             - **Autorização AET:**.. `{r["linha"]["AET"]}`  
             - **Observação:**....... `{r["linha"]["OBS"]}`  
-            - **PBT Máx. Permitido:**`{r["limite"]:.2f}` Kg 
             """)
+            if comprimento <= r["linha"]["Tam"]:
+                st.markdown(f"- **Comprimento inferior a** `{r["linha"]["Tam"]:.0f}`m - PBT `{r["linha"]["Pbt1"]}` Kg")
+            else:
+                st.markdown(f"- **Comprimento Superior a** `{r["linha"]["Tam"]:.0f}`m - PBT `{r["linha"]["Pbt2"]}` Kg")
     
             st.markdown("### ✅ Resultado da Apuração")
             for p, t in zip(r["placas"], r["taras"]):
