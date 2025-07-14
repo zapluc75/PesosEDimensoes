@@ -32,11 +32,6 @@ def calcular_excesso(linha, taras, nota_fiscal, comprimento):
 def salvar_csv(dados, nome_arquivo="resultados.csv"):
     df = pd.DataFrame([dados])
 
-    # Converte colunas datetime para string no formato brasileiro
-    for coluna in df.columns:
-        if pd.api.types.is_datetime64_any_dtype(df[coluna]):
-            df[coluna] = df[coluna].dt.strftime("%d/%m/%Y %H:%M:%S")
-
     if os.path.exists(nome_arquivo):
         df.to_csv(nome_arquivo, mode='a', header=False, index=False)
     else:
