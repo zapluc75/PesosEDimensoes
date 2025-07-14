@@ -31,6 +31,12 @@ def calcular_excesso(linha, taras, nota_fiscal, comprimento):
 # Função para Salvar Resultado
 def salvar_csv(dados, nome_arquivo="resultados.csv"):
     df = pd.DataFrame([dados])
+
+    # Converte colunas datetime para string no formato brasileiro
+    for coluna in df.columns:
+        if pd.api.types.is_datetime64_any_dtype(df[coluna]):
+            df[coluna] = df[coluna].dt.strftime("%d/%m/%Y %H:%M:%S")
+
     if os.path.exists(nome_arquivo):
         df.to_csv(nome_arquivo, mode='a', header=False, index=False)
     else:
@@ -64,7 +70,7 @@ def main():
         nota_fiscal = st.sidebar.number_input("Peso Líquido da Nota Fiscal (Kg)", min_value=0, key="nota_fiscal")
         comprimento = st.sidebar.number_input("Comprimento do Caminhão (em metros)", min_value=0, key="comprimento")
         ano_atual = datetime.now().year
-        fabricacao = st.sidebar.number_input("Ano de fabricação do caminhão",min_value=1950, max_value=ano_atual, step=1, key="ano_fabrica")
+        fabricacao = st.sidebar.number_input("Ano de fabricação do caminhão",min_value=1950, max_value=ano_atual, step=1, key="fabricacao")
         nome_caminhao = linha["Nome"]
         st.sidebar.info(f"Tipo Selecionado: **{nome_caminhao}**")
     
@@ -113,7 +119,8 @@ def main():
                 "Comprimento": comprimento,
                 "PBT": pbt,
                 "LimiteLegal": limite,
-                "Excesso": excesso
+                "Excesso": excesso,
+                "Fabricacao": fabricacao
             }
     
             salvar_csv(dados_exportar)
@@ -122,7 +129,7 @@ def main():
             st.session_state.resultado = {
                 "tipo": tipo, "limite": limite, "taras": taras, "placas": placas,
                 "nota_fiscal": nota_fiscal, "comprimento": comprimento,
-                "pbt": pbt, "excesso": excesso, "linha": linha
+                "pbt": pbt, "excesso": excesso, "linha": linha, "fabricacao": fabricacao
             }
     
             st.rerun()
@@ -198,29 +205,35 @@ def main():
     
     with tab3:
         st.write("📄 Pesquisa Avançada")
-        
+
         # Carrega o CSV
         tabela = pd.read_csv("resultados.csv")
 
-        st.title("Consulta de Resultados de Pesagem")
+        # Converte a coluna de DataHora para datetime (se ainda não for)
+        tabela["DataHora"] = pd.to_datetime(tabela["DataHora"])
 
-        # Opção para selecionar um registro por data/hora
-        opcao = st.selectbox("Selecione um registro:", tabela["DataHora"])
+        # Extrai dia e mês
+        tabela["Dia"] = tabela["DataHora"].dt.day
+        tabela["Mes"] = tabela["DataHora"].dt.month
 
-        # Filtra a linha correspondente
-        linha = tabela[tabela["DataHora"] == opcao].iloc[0]
+        st.title("Consulta de Pesagens por Dia e Mês")
 
-        # Mostra os dados como formulário (apenas leitura)
-        st.subheader("Informações do Caminhão")
+        # Interface para escolha do mês e do dia
+        meses = sorted(tabela["Mes"].unique())
+        mes_escolhido = st.selectbox("Selecione o mês:", meses)
 
-        st.text_input("Data e Hora", linha["DataHora"], disabled=True)
-        st.text_input("Tipo de Caminhão", linha["TipoCaminhao"], disabled=True)
-        st.text_input("Placas", linha["Placas"], disabled=True)
-        st.number_input("Tara Total (Kg)", value=linha["TaraTotal"], disabled=True)
-        st.number_input("Peso Nota Fiscal (Kg)", value=linha["NotaFiscal"], disabled=True)
-        st.number_input("Comprimento (m)", value=linha["Comprimento"], disabled=True)
-        st.number_input("PBT Permitido (Kg)", value=linha["PBT"], disabled=True)
-        st.number_input("Limite Legal (Kg)", value=linha["LimiteLegal"], disabled=True)
-        st.number_input("Excesso de Peso (Kg)", value=linha["Excesso"], disabled=True)
+        # Após o mês, filtra os dias disponíveis naquele mês
+        dias_disponiveis = sorted(tabela[tabela["Mes"] == mes_escolhido]["Dia"].unique())
+        dia_escolhido = st.selectbox("Selecione o dia:", dias_disponiveis)
+
+        # Aplica o filtro
+        filtro = (tabela["Mes"] == mes_escolhido) & (tabela["Dia"] == dia_escolhido)
+        dados_filtrados = tabela[filtro]
+
+        # Exibe a tabela com os campos desejados
+        st.subheader(f"Resultados para {dia_escolhido:02d}/{mes_escolhido:02d}")
+        colunas_desejadas = ["DataHora", "TipoCaminhao", "Placas", "TaraTotal", "NotaFiscal", "Comprimento", "PBT",
+                             "LimiteLegal", "Excesso"]
+        st.dataframe(dados_filtrados[colunas_desejadas].reset_index(drop=True))
 if __name__ == "__main__":
     main()
