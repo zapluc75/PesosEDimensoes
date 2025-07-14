@@ -210,7 +210,7 @@ def main():
         tabela = pd.read_csv("resultados.csv")
 
         # Converte a coluna de DataHora para datetime (se ainda não for)
-        tabela["DataHora"] = pd.to_datetime(tabela["DataHora"])
+        tabela["DataHora"] = pd.to_datetime(tabela["DataHora"], format="%d-%m-%Y %H:%M:%S")
 
         # Extrai dia e mês
         tabela["Dia"] = tabela["DataHora"].dt.day
