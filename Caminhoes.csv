@@ -1,116 +1,116 @@
 Codigo,Pbt1,Qtara,Tam,Pbt2,Tamax,AET,OBS,Nome
-C1,12000,1,14,12000,14,Nao,Veiculo Comum,Caminhão
-C2,16000,1,14,16000,14,Nao,Veiculo Comum,Caminhão
-C3,23000,1,14,23000,14,Nao,Veiculo Comum,Caminhão
-C4,19500,1,14,19500,14,Nao,Veiculo Comum,Caminhão
-C5,19500,1,14,19500,14,Nao,Veiculo Comum,Caminhão
-C6,22000,1,14,22000,14,Nao,Veiculo Comum,Caminhão
-C7,29000,1,14,29000,14,Nao,Veiculo Comum,Caminhão
-C8,25500,1,14,25500,14,Nao,Veiculo Comum,Caminhão
-C9,25500,1,14,25500,14,Nao,Veiculo Comum,Caminhão
-CTS1,26000,2,16,26000,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS2,33000,2,16,33000,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS3,36000,2,16,36000,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS4,41500,2,16,41500,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS5,43000,2,16,43000,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS6,45000,2,16,45000,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS7,33000,2,16,33000,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS8,43000,2,16,43000,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS9,39500,2,16,39500,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS10,45000,2,16,48500,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS11,48500,2,17.5,58500,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS12,45000,2,16,45000,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS13,45000,2,16,50000,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS14,45000,2,16,46500,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS15,45000,2,16,53000,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS16,45000,2,16,49500,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS17,29500,2,16,29500,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS18,36500,2,16,36500,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS19,40000,2,16,40000,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS20,45000,2,16,52500,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS21,45000,2,16,47500,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS22,45000,2,16,54500,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS23,45000,2,16,51000,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS24,39000,2,16,39000,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS25,35500,2,16,35500,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS26,45000,2,16,46000,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS27,42500,2,16,42500,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS28,45000,2,16,49000,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CTS29,45000,2,16,45500,18.60,Nao,Veiculo Comum,Caminhão Trator + Semirreboque
-CR1,36000,2,17.5,36000,19.80,Nao,Veiculo Comum,Caminhão + Reboque
-CR2,43000,2,17.5,43000,19.80,Nao,Veiculo Comum,Caminhão + Reboque
-CR3,45000,2,17.5,50000,19.80,Nao,Veiculo Comum,Caminhão + Reboque
-CR4,43000,2,17.5,43000,19.80,Nao,Veiculo Comum,Caminhão + Reboque
-CR5,45000,2,17.5,50000,19.80,Nao,Veiculo Comum,Caminhão + Reboque
-CR6,45000,2,17.5,57000,19.80,Nao,Veiculo Comum,Caminhão + Reboque
-CR7,39500,2,17.5,39500,19.80,Nao,Veiculo Comum,Caminhão + Reboque
-CR8,45000,2,17.5,46500,19.80,Nao,Veiculo Comum,Caminhão + Reboque
-CR9,45000,2,17.5,53500,19.80,Nao,Veiculo Comum,Caminhão + Reboque
-CR10,45000,2,17.5,49000,19.80,Nao,Veiculo Comum,Caminhão + Reboque
-CR11,45000,2,17.5,56000,19.80,Nao,Veiculo Comum,Caminhão + Reboque
-CR12,45000,2,17.5,45500,19.80,Nao,Veiculo Comum,Caminhão + Reboque
-CR13,45000,2,17.5,52500,19.80,Nao,Veiculo Comum,Caminhão + Reboque
-CTSR1,45000,3,17.5,46000,19.80,Nao,Veiculo Comum,Caminhão Trator + Semirreboque + Reboque
-CTSR2,45000,3,17.5,53000,19.80,Nao,Veiculo Comum,Caminhão Trator + Semirreboque + Reboque
-CTSR3,45000,3,17.5,53000,19.80,Nao,Veiculo Comum,Caminhão Trator + Semirreboque + Reboque
-CTSR4,45000,3,17.5,53000,19.80,Nao,Veiculo Comum,Caminhão Trator + Semirreboque + Reboque
- CTSR5,45000,3,17.5,49500,19.80,Nao,Veiculo Comum,Caminhão Trator + Semirreboque + Reboque
-CTSR6,45000,3,17.5,56500,19.80,Nao,Veiculo Comum,Caminhão Trator + Semirreboque + Reboque
-CTSR7,45000,3,17.5,56500,19.80,Nao,Veiculo Comum,Caminhão Trator + Semirreboque + Reboque
-CTSS1,36000,3,17.5,36000,19.80,Nao,Veiculo Comum,Caminhão Trator + 2 Semirreboques
-CTSS2,43000,3,17.5,43000,19.80,Nao,Veiculo Comum,Caminhão Trator + 2 Semirreboques
-CTSS3,39500,3,17.5,39500,19.80,Nao,Veiculo Comum,Caminhão Trator + 2 Semirreboques
-CTSS4,43000,3,17.5,43000,19.80,Nao,Veiculo Comum,Caminhão Trator + 2 Semirreboques
-CTSS5,45000,3,17.5,50000,19.80,Nao,Veiculo Comum,Caminhão Trator + 2 Semirreboques
-CTSS6,45000,3,17.5,46500,19.80,Nao,Veiculo Comum,Caminhão Trator + 2 Semirreboques
-CTSS7,45000,3,17.5,50000,19.80,Nao,Veiculo Comum,Caminhão Trator + 2 Semirreboques
-CTSS8,45000,3,17.5,57000,19.80,Nao,Veiculo Comum,Caminhão Trator + 2 Semirreboques
-CTSS9,45000,3,17.5,53500,19.80,Nao,Veiculo Comum,Caminhão Trator + 2 Semirreboques
-CTSR1+,46000,3,19.8,46000,30,Sim,Veiculo Longo,Caminhão Trator + Semirreboque + Reboque
-CTSR2+,53000,3,19.8,53000,30,Sim,Veiculo Longo,Caminhão Trator + Semirreboque + Reboque
-CTSR3+,53000,3,19.8,53000,30,Sim,Veiculo Longo,Caminhão Trator + Semirreboque + Reboque
-CTSR4+,60000,3,25,60000,30,Sim,Veiculo Longo,Caminhão Trator + Semirreboque + Reboque
-CTSR5+,67000,3,25,67000,30,Sim,Veiculo Longo,Caminhão Trator + Semirreboque + Reboque
-CTSR6+,74000,3,25,74000,30,Sim,Veiculo Longo,Caminhão Trator + Semirreboque + Reboque
-CTSR7+,66000,3,25,66000,30,Sim,Veiculo Longo,Caminhão Trator + Semirreboque + Reboque
-CTSR8+,73000,3,25,73000,30,Sim,Veiculo Longo,Caminhão Trator + Semirreboque + Reboque
-CTSS1+,36000,3,19.8,36000,30,Sim,Veiculo Longo,Caminhão Trator + 2 Semirreboques
-CTSS2+,43000,3,19.8,43000,30,Sim,Veiculo Longo,Caminhão Trator + 2 Semirreboques
-CTSS3+,39500,3,19.8,39500,30,Sim,Veiculo Longo,Caminhão Trator + 2 Semirreboques
-CTSS4+,43000,3,19.8,43000,30,Sim,Veiculo Longo,Caminhão Trator + 2 Semirreboques
-CTSS5+,50000,3,19.8,50000,30,Sim,Veiculo Longo,Caminhão Trator + 2 Semirreboques
-CTSS6+,46500,3,19.8,46500,30,Sim,Veiculo Longo,Caminhão Trator + 2 Semirreboques
-CTSS7+,50000,3,19.8,50000,30,Sim,Veiculo Longo,Caminhão Trator + 2 Semirreboques
-CTSS8+,57000,3,19.8,57000,30,Sim,Veiculo Longo,Caminhão Trator + 2 Semirreboques
-CTSS9+,53500,3,19.8,53500,30,Sim,Veiculo Longo,Caminhão Trator + 2 Semirreboques
-CTSS10+,65500,3,25,65500,30,Sim,Veiculo Longo,Caminhão Trator + 2 Semirreboques
-CTSS11+,65500,3,25,65500,30,Sim,Veiculo Longo,Caminhão Trator + 2 Semirreboques
-CTSS12+,74000,3,25,74000,30,Sim,Veiculo Longo,Caminhão Trator + 2 Semirreboques
-CTSS13+,63000,3,25,63000,30,Sim,Veiculo Longo,Caminhão Trator + 2 Semirreboques
-CRR1+,63000,3,25,63000,30,Sim,Veiculo Longo,Caminhão + 2 Reboques
-CRR2+,70000,3,25,70000,30,Sim,Veiculo Longo,Caminhão + 2 Reboques
-CRR3+,69000,3,25,69000,30,Sim,Veiculo Longo,Caminhão + 2 Reboques
-CTSSS1+,60000,4,25,60000,30,Sim,Veiculo Longo,Caminhão Trator + 3 Semirreboques
-CTSSS2+,60000,4,25,60000,30,Sim,Veiculo Longo,Caminhão Trator + 3 Semirreboques
-CTSSS3+,60000,4,25,60000,30,Sim,Veiculo Longo,Caminhão Trator + 3 Semirreboques
-CTSSS4+,67000,4,25,67000,30,Sim,Veiculo Longo,Caminhão Trator + 3 Semirreboques
-CTSSS5+,67000,4,25,67000,30,Sim,Veiculo Longo,Caminhão Trator + 3 Semirreboques
-CTSSS6+,67000,4,25,67000,30,Sim,Veiculo Longo,Caminhão Trator + 3 Semirreboques
-CTSSS7+,74000,4,25,74000,30,Sim,Veiculo Longo,Caminhão Trator + 3 Semirreboques
-CTSSS8+,56500,4,19.8,56500,30,Sim,Veiculo Longo,Caminhão Trator + 3 Semirreboques
-CR1+,36000,2,19.8,36000,25,S,Somente reboque ate 30 abril 2009,Caminhão + Reboque
-CR2+,43000,2,19.8,43000,25,S,Somente reboque ate 30 abril 2009,Caminhão + Reboque
-CR3+,50000,2,19.8,50000,25,S,Somente reboque ate 30 abril 2009,Caminhão + Reboque
-CR4+,43000,2,19.8,43000,25,S,Somente reboque ate 30 abril 2009,Caminhão + Reboque
-CR5+,50000,2,19.8,50000,25,S,Somente reboque ate 30 abril 2009,Caminhão + Reboque
-CR6+,57000,2,19.8,57000,25,S,Somente reboque ate 30 abril 2009,Caminhão + Reboque
-CR7+,39500,2,19.8,39500,25,S,Somente reboque ate 30 abril 2009,Caminhão + Reboque
-CR8+,46500,2,19.8,46500,25,S,Somente reboque ate 30 abril 2009,Caminhão + Reboque
-CR9+,53500,2,19.8,53500,25,S,Somente reboque ate 30 abril 2009,Caminhão + Reboque
-CR10+,49000,2,19.8,49000,25,S,Somente reboque ate 30 abril 2009,Caminhão + Reboque
-CR11+,56000,2,19.8,56000,25,S,Somente reboque ate 30 abril 2009,Caminhão + Reboque
-CR12+,45500,2,19.8,45500,25,S,Somente reboque ate 30 abril 2009,Caminhão + Reboque
-CR13+,52500,2,19.8,52500,25,S,Somente reboque ate 30 abril 2009,Caminhão + Reboque
-CTSRR1+,91000,3,28,91000,30,S,Reboque com rala,Caminhão Trator + Semirreboque + Reboque com rala
-CTSRR2+,82500,3,28,82500,30,S,Reboque com rala,Caminhão Trator + Semirreboque + Reboque com rala
-CTSRR3+,82500,3,28,82500,30,S,Reboque com rala,Caminhão Trator + Semirreboque + Reboque com rala
+C1,12000,1,14,12000,14,Nao,Veiculo Comum,Caminhao
+C2,16000,1,14,16000,14,Nao,Veiculo Comum,Caminhao
+C3,23000,1,14,23000,14,Nao,Veiculo Comum,Caminhao
+C4,19500,1,14,19500,14,Nao,Veiculo Comum,Caminhao
+C5,19500,1,14,19500,14,Nao,Veiculo Comum,Caminhao
+C6,22000,1,14,22000,14,Nao,Veiculo Comum,Caminhao
+C7,29000,1,14,29000,14,Nao,Veiculo Comum,Caminhao
+C8,25500,1,14,25500,14,Nao,Veiculo Comum,Caminhao
+C9,25500,1,14,25500,14,Nao,Veiculo Comum,Caminhao
+CTS1,26000,2,16,26000,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS2,33000,2,16,33000,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS3,36000,2,16,36000,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS4,41500,2,16,41500,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS5,43000,2,16,43000,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS6,45000,2,16,45000,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS7,33000,2,16,33000,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS8,43000,2,16,43000,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS9,39500,2,16,39500,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS10,45000,2,16,48500,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS11,48500,2,17.5,58500,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS12,45000,2,16,45000,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS13,45000,2,16,50000,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS14,45000,2,16,46500,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS15,45000,2,16,53000,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS16,45000,2,16,49500,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS17,29500,2,16,29500,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS18,36500,2,16,36500,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS19,40000,2,16,40000,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS20,45000,2,16,52500,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS21,45000,2,16,47500,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS22,45000,2,16,54500,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS23,45000,2,16,51000,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS24,39000,2,16,39000,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS25,35500,2,16,35500,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS26,45000,2,16,46000,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS27,42500,2,16,42500,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS28,45000,2,16,49000,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CTS29,45000,2,16,45500,18.60,Nao,Veiculo Comum,Caminhao Trator + Semirreboque
+CR1,36000,2,17.5,36000,19.80,Nao,Veiculo Comum,Caminhao + Reboque
+CR2,43000,2,17.5,43000,19.80,Nao,Veiculo Comum,Caminhao + Reboque
+CR3,45000,2,17.5,50000,19.80,Nao,Veiculo Comum,Caminhao + Reboque
+CR4,43000,2,17.5,43000,19.80,Nao,Veiculo Comum,Caminhao + Reboque
+CR5,45000,2,17.5,50000,19.80,Nao,Veiculo Comum,Caminhao + Reboque
+CR6,45000,2,17.5,57000,19.80,Nao,Veiculo Comum,Caminhao + Reboque
+CR7,39500,2,17.5,39500,19.80,Nao,Veiculo Comum,Caminhao + Reboque
+CR8,45000,2,17.5,46500,19.80,Nao,Veiculo Comum,Caminhao + Reboque
+CR9,45000,2,17.5,53500,19.80,Nao,Veiculo Comum,Caminhao + Reboque
+CR10,45000,2,17.5,49000,19.80,Nao,Veiculo Comum,Caminhao + Reboque
+CR11,45000,2,17.5,56000,19.80,Nao,Veiculo Comum,Caminhao + Reboque
+CR12,45000,2,17.5,45500,19.80,Nao,Veiculo Comum,Caminhao + Reboque
+CR13,45000,2,17.5,52500,19.80,Nao,Veiculo Comum,Caminhao + Reboque
+CTSR1,45000,3,17.5,46000,19.80,Nao,Veiculo Comum,Caminhao Trator + Semirreboque + Reboque
+CTSR2,45000,3,17.5,53000,19.80,Nao,Veiculo Comum,Caminhao Trator + Semirreboque + Reboque
+CTSR3,45000,3,17.5,53000,19.80,Nao,Veiculo Comum,Caminhao Trator + Semirreboque + Reboque
+CTSR4,45000,3,17.5,53000,19.80,Nao,Veiculo Comum,Caminhao Trator + Semirreboque + Reboque
+ CTSR5,45000,3,17.5,49500,19.80,Nao,Veiculo Comum,Caminhao Trator + Semirreboque + Reboque
+CTSR6,45000,3,17.5,56500,19.80,Nao,Veiculo Comum,Caminhao Trator + Semirreboque + Reboque
+CTSR7,45000,3,17.5,56500,19.80,Nao,Veiculo Comum,Caminhao Trator + Semirreboque + Reboque
+CTSS1,36000,3,17.5,36000,19.80,Nao,Veiculo Comum,Caminhao Trator + 2 Semirreboques
+CTSS2,43000,3,17.5,43000,19.80,Nao,Veiculo Comum,Caminhao Trator + 2 Semirreboques
+CTSS3,39500,3,17.5,39500,19.80,Nao,Veiculo Comum,Caminhao Trator + 2 Semirreboques
+CTSS4,43000,3,17.5,43000,19.80,Nao,Veiculo Comum,Caminhao Trator + 2 Semirreboques
+CTSS5,45000,3,17.5,50000,19.80,Nao,Veiculo Comum,Caminhao Trator + 2 Semirreboques
+CTSS6,45000,3,17.5,46500,19.80,Nao,Veiculo Comum,Caminhao Trator + 2 Semirreboques
+CTSS7,45000,3,17.5,50000,19.80,Nao,Veiculo Comum,Caminhao Trator + 2 Semirreboques
+CTSS8,45000,3,17.5,57000,19.80,Nao,Veiculo Comum,Caminhao Trator + 2 Semirreboques
+CTSS9,45000,3,17.5,53500,19.80,Nao,Veiculo Comum,Caminhao Trator + 2 Semirreboques
+CTSR1+,46000,3,19.8,46000,30,Sim,Veiculo Longo,Caminhao Trator + Semirreboque + Reboque
+CTSR2+,53000,3,19.8,53000,30,Sim,Veiculo Longo,Caminhao Trator + Semirreboque + Reboque
+CTSR3+,53000,3,19.8,53000,30,Sim,Veiculo Longo,Caminhao Trator + Semirreboque + Reboque
+CTSR4+,60000,3,25,60000,30,Sim,Veiculo Longo,Caminhao Trator + Semirreboque + Reboque
+CTSR5+,67000,3,25,67000,30,Sim,Veiculo Longo,Caminhao Trator + Semirreboque + Reboque
+CTSR6+,74000,3,25,74000,30,Sim,Veiculo Longo,Caminhao Trator + Semirreboque + Reboque
+CTSR7+,66000,3,25,66000,30,Sim,Veiculo Longo,Caminhao Trator + Semirreboque + Reboque
+CTSR8+,73000,3,25,73000,30,Sim,Veiculo Longo,Caminhao Trator + Semirreboque + Reboque
+CTSS1+,36000,3,19.8,36000,30,Sim,Veiculo Longo,Caminhao Trator + 2 Semirreboques
+CTSS2+,43000,3,19.8,43000,30,Sim,Veiculo Longo,Caminhao Trator + 2 Semirreboques
+CTSS3+,39500,3,19.8,39500,30,Sim,Veiculo Longo,Caminhao Trator + 2 Semirreboques
+CTSS4+,43000,3,19.8,43000,30,Sim,Veiculo Longo,Caminhao Trator + 2 Semirreboques
+CTSS5+,50000,3,19.8,50000,30,Sim,Veiculo Longo,Caminhao Trator + 2 Semirreboques
+CTSS6+,46500,3,19.8,46500,30,Sim,Veiculo Longo,Caminhao Trator + 2 Semirreboques
+CTSS7+,50000,3,19.8,50000,30,Sim,Veiculo Longo,Caminhao Trator + 2 Semirreboques
+CTSS8+,57000,3,19.8,57000,30,Sim,Veiculo Longo,Caminhao Trator + 2 Semirreboques
+CTSS9+,53500,3,19.8,53500,30,Sim,Veiculo Longo,Caminhao Trator + 2 Semirreboques
+CTSS10+,65500,3,25,65500,30,Sim,Veiculo Longo,Caminhao Trator + 2 Semirreboques
+CTSS11+,65500,3,25,65500,30,Sim,Veiculo Longo,Caminhao Trator + 2 Semirreboques
+CTSS12+,74000,3,25,74000,30,Sim,Veiculo Longo,Caminhao Trator + 2 Semirreboques
+CTSS13+,63000,3,25,63000,30,Sim,Veiculo Longo,Caminhao Trator + 2 Semirreboques
+CRR1+,63000,3,25,63000,30,Sim,Veiculo Longo,Caminhao + 2 Reboques
+CRR2+,70000,3,25,70000,30,Sim,Veiculo Longo,Caminhao + 2 Reboques
+CRR3+,69000,3,25,69000,30,Sim,Veiculo Longo,Caminhao + 2 Reboques
+CTSSS1+,60000,4,25,60000,30,Sim,Veiculo Longo,Caminhao Trator + 3 Semirreboques
+CTSSS2+,60000,4,25,60000,30,Sim,Veiculo Longo,Caminhao Trator + 3 Semirreboques
+CTSSS3+,60000,4,25,60000,30,Sim,Veiculo Longo,Caminhao Trator + 3 Semirreboques
+CTSSS4+,67000,4,25,67000,30,Sim,Veiculo Longo,Caminhao Trator + 3 Semirreboques
+CTSSS5+,67000,4,25,67000,30,Sim,Veiculo Longo,Caminhao Trator + 3 Semirreboques
+CTSSS6+,67000,4,25,67000,30,Sim,Veiculo Longo,Caminhao Trator + 3 Semirreboques
+CTSSS7+,74000,4,25,74000,30,Sim,Veiculo Longo,Caminhao Trator + 3 Semirreboques
+CTSSS8+,56500,4,19.8,56500,30,Sim,Veiculo Longo,Caminhao Trator + 3 Semirreboques
+CR1+,36000,2,19.8,36000,25,S,Somente reboque ate 30 abril 2009,Caminhao + Reboque
+CR2+,43000,2,19.8,43000,25,S,Somente reboque ate 30 abril 2009,Caminhao + Reboque
+CR3+,50000,2,19.8,50000,25,S,Somente reboque ate 30 abril 2009,Caminhao + Reboque
+CR4+,43000,2,19.8,43000,25,S,Somente reboque ate 30 abril 2009,Caminhao + Reboque
+CR5+,50000,2,19.8,50000,25,S,Somente reboque ate 30 abril 2009,Caminhao + Reboque
+CR6+,57000,2,19.8,57000,25,S,Somente reboque ate 30 abril 2009,Caminhao + Reboque
+CR7+,39500,2,19.8,39500,25,S,Somente reboque ate 30 abril 2009,Caminhao + Reboque
+CR8+,46500,2,19.8,46500,25,S,Somente reboque ate 30 abril 2009,Caminhao + Reboque
+CR9+,53500,2,19.8,53500,25,S,Somente reboque ate 30 abril 2009,Caminhao + Reboque
+CR10+,49000,2,19.8,49000,25,S,Somente reboque ate 30 abril 2009,Caminhao + Reboque
+CR11+,56000,2,19.8,56000,25,S,Somente reboque ate 30 abril 2009,Caminhao + Reboque
+CR12+,45500,2,19.8,45500,25,S,Somente reboque ate 30 abril 2009,Caminhao + Reboque
+CR13+,52500,2,19.8,52500,25,S,Somente reboque ate 30 abril 2009,Caminhao + Reboque
+CTSRR1+,91000,3,28,91000,30,S,Reboque com rala,Caminhao Trator + Semirreboque + Reboque com rala
+CTSRR2+,82500,3,28,82500,30,S,Reboque com rala,Caminhao Trator + Semirreboque + Reboque com rala
+CTSRR3+,82500,3,28,82500,30,S,Reboque com rala,Caminhao Trator + Semirreboque + Reboque com rala
